@@ -9,7 +9,7 @@ import os
 from pydantic import BaseModel
 import json
 
-
+FRESHDESK_DOMAIN=""
 FRESHDESK_API_KEY=""
 POLLING_INTERVAL=""
 # # Configuration class
@@ -90,7 +90,7 @@ async def update_ticket(ticket_id: int, updates: Dict) -> None:
     Update a ticket in Freshdesk with the given updates.
     """
     async with httpx.AsyncClient() as client:
-        url = f"https://{settings.FRESHDESK_DOMAIN}/api/v2/tickets/{ticket_id}"
+        url = f"https://{FRESHDESK_DOMAIN}/api/v2/tickets/{ticket_id}"
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Basic {FRESHDESK_API_KEY}"
@@ -109,7 +109,7 @@ async def fetch_tickets() -> List[Dict]:
     Fetch tickets from Freshdesk API.
     """
     async with httpx.AsyncClient() as client:
-        url = f"https://{settings.FRESHDESK_DOMAIN}/api/v2/tickets"
+        url = f"https://{FRESHDESK_DOMAIN}/api/v2/tickets"
         headers = {
             "Authorization": f"Basic {FRESHDESK_API_KEY}"
         }
