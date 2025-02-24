@@ -22,3 +22,6 @@
 2025-02-24 17:33:06,793 - main - INFO - Ticket monitoring started
 2025-02-24 17:33:06,794 - main - INFO - Fetching tickets...
 2025-02-24 17:33:06,829 - main - ERROR - Error in monitoring loop: name 'settings' is not defined
+2025-02-24 18:07:43,463 - main - INFO - Ticket monitoring started
+2025-02-24 18:07:43,464 - main - INFO - Fetching tickets...
+2025-02-24 18:07:43,496 - main - ERROR - Error in monitoring loop: name 'settings' is not defined
